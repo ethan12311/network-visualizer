@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Network Topology Visualizer</title>
+  
+  <!-- vis-network CDN -->
+  <script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Network Topology Visualizer</h1>
+    
+    <div class="controls">
+      <select id="topologySelect">
+        <option value="star">Star</option>
+        <option value="bus">Bus</option>
+        <option value="ring">Ring</option>
+        <option value="mesh">Full Mesh</option>
+        <option value="tree">Hierarchical (Tree)</option>
+      </select>
+      <button onclick="drawSelectedTopology()">Draw</button>
+    </div>
+
+    <div id="network" class="network-container"></div>
+
+    <div class="description" id="description">
+      Select a topology and click Draw!
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
